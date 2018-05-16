@@ -1,6 +1,6 @@
 /*
  * Fecha creación: 28/12/2015
- * CALCULO-SA
+ * dtrabas@gmail.com
  */
 package puzzles;
 
