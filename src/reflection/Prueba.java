@@ -1,6 +1,6 @@
 /*
  * Fecha creación: 21/03/2018
- * CALCULO-SA
+ * dtrabas@gmail.com
  */
 package reflection;
 

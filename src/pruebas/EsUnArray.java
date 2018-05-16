@@ -18,6 +18,24 @@ public class EsUnArray {
          .compile("[^\\u0009\\u000A\\u000D\\u0020-\\uD7FF\\uE000-\\uFFFD\uD800\uDC00-\uDBFF\uDFFF]");
 
    /**
+    * @param args
+    */
+   public static void main(String[] args) {
+      Object o = new int[] {1, 2};
+      int[] arrayInt = new int[] {1, 2};
+      System.out.println(o instanceof int[]); // prints "true"
+      System.out.println(arrayInt instanceof int[]); // prints "true"
+      System.out.println(isArray(o)); // prints "true"
+      System.out.println(isArray(arrayInt)); // ???
+      System.out.println("*" + eliminaCaracteresInvalidosXml(null) + "*");
+      System.out.println("*" + eliminaCaracteresInvalidosXml("") + "*");
+   }
+
+   public static boolean isArray(final Object obj) {
+      return obj instanceof Object[];
+   }
+
+   /**
     * 
     * @param cadena
     * @return
@@ -28,24 +46,6 @@ public class EsUnArray {
       } else {
          return cadena;
       }
-   }
-
-   /**
-    * @param args
-    */
-   public static void main(String[] args) {
-      Object o = new int[] {1, 2};
-      int[] arrayInt = new int[] {1, 2};
-      System.out.println(o instanceof int[]); // prints "true"
-      System.out.println(arrayInt instanceof int[]); // ???
-      System.out.println(isArray(o)); // prints "true"
-      System.out.println(isArray(arrayInt)); // ???
-      System.out.println("*" + eliminaCaracteresInvalidosXml(null) + "*");
-      System.out.println("*" + eliminaCaracteresInvalidosXml("") + "*");
-   }
-
-   public static boolean isArray(final Object obj) {
-      return obj instanceof Object[];
    }
 
 }
